@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+
+
+{% block content %}
+
+<h1>
+    Blog Details 
+</h1>
+<h2>
+    <img width="400px" height="400px" src="{{batman.image.url}}" alt="" >
+    
+   
+</h2>
+    <h2 style="right: 50%;">
+        place : {{batman.title}}
+    </h2>
+    <h2>
+        By. : {{batman.author}}
+    </h2>
+    <h3>
+        Description : {{batman.text}}
+    </h3>
+    
+    <h3>
+        Edit Post : <a href="{% url 'blog_edit' batman.pk %}">Edit Post</a>
+    </h3>
+    <h3>
+        Delete Post : <a href="{% url 'blog_delete' batman.pk %}">Delete Post</a>
+    </h3>
+{% endblock content %}

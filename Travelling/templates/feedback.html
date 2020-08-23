@@ -1,0 +1,18 @@
+
+
+{% extends "index.html" %}
+
+
+
+{% block content %}
+
+<h1>
+    write a Feedback 
+</h1>
+
+  <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}  
+    <input type="submit" class="btn btn-primary" value="save" id="">
+  </form>
+{% endblock content %}

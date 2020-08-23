@@ -1,0 +1,50 @@
+{% extends "index.html"%}
+
+{% block content %}
+
+
+<head>
+    
+<link rel="stylesheet" href="style.css">
+</head>
+
+<a href="{% url 'new' %}"></a>
+<div class="row"></div>
+
+{% for x in object_list %}
+<br>
+<div class="row" style="margin-top: 40px;">
+
+        <div class="col-lg-4">
+            <img width="200px" height="200px" src="{{x.image.url}}" alt="" >
+        </div>
+        <div class="col-lg-8">
+            
+         <a href="{% url 'detailview' x.pk %}">
+             <h1>
+                 Place: {{x.title}}
+             </h1>
+             
+         </a>
+         <h2>
+            by: {{x.author}}
+         </h2>
+         <h3>
+             {{x.about}}
+        </h3>     
+        <div class="rating">
+            <input type="radio" name="star" id="star1"><label for="star1"></label>
+                    <input type="radio" name="star" id="star2"><label for="star2"></label>
+                    <input type="radio" name="star" id="star3"><label for="star3"></label>
+                    <input type="radio" name="star" id="star4"><label for="star4"></label>
+             <input type="radio" name="star" id="star5"><label for="star5"></label>
+                    
+    </div>
+
+        </div>
+</div>
+</br>
+{% endfor %}
+
+
+{% endblock content %}>

@@ -1,0 +1,28 @@
+.rating
+{
+position: relative;
+top:50%;
+left: 50%;
+transform:translate(-50%,50%);
+display: flex;
+}
+.rating input
+{
+    display: none;
+}
+.rating label
+{
+    display: block;
+    cursor: pointer;
+    width:50px;
+    background:#ccc;
+
+}
+.rating label:before
+{
+    content: 'f005';
+    font-family:fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 50px;
+}
